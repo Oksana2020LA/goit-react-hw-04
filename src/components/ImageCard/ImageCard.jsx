@@ -1,6 +1,6 @@
 import css from './ImageCard.module.css';
 
-const ImageCard = ({ url, description, author, likes }) => {
+const ImageCard = ({ url, description, author, likes, onClick }) => {
   return (
     <div className={css.imageCard}>
       <img
@@ -9,6 +9,7 @@ const ImageCard = ({ url, description, author, likes }) => {
         alt={description}
         width={360}
         height={200}
+        onClick={onClick}
       />
       <div className={css.descriptionWrapper}>
         <p className={css.author}>Author: {author}</p>
